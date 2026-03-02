@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pàgina Principal</title>
+  <link rel="icon" type="image/x-icon" href="logo.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Botón modo claro/oscuro -->
+  <input type="checkbox" id="checkboxInput" />
+  <label for="checkboxInput" class="toggleSwitch">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+  </label>
+
+  <!-- Menú hamburguesa -->
+  <label class="burger" for="burger">
+    <input type="checkbox" id="burger" />
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <!-- Menú de navegación -->
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="B0/indexb-0.html">Documentació Tècnica</a></li>
+      <!-- 
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Servicios</a></li>
+      -->
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <!-- Barra de búsqueda -->
+    <div class="group">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+        <g>
+          <path
+            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 
+            4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 
+            3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 
+            11c0-4.135 3.365-7.5 7.5-7.5s7.5 
+            3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+          </path>
+        </g>
+      </svg>
+      <input id="query" class="input" type="search" placeholder="Buscar..." name="searchbar" />
+    </div>
+  </nav>
+
+  <h1 class="main-title">Pàgina Principal</h1>
+
+
+
+
+
+  <!-- Tarjetas de ejemplo -->
+<div class="cards-container">
+  <div class="card">
+    <div class="icon">♦︎</div>
+    <h3>Documentació Tècnica</h3>
+    <p>Accedeix a la documentació del Bloc 0.<p>
+    <button class="button" onclick="window.location.href='B0/B0A2.html'">
+    Aceddir
+    </button>
+
+  </div>
+
+ 
+
+    
+  
+  <div class="progress-card">
+  <div class="header">Progrés Blocs</div>
+  <div class="body">
+    <div class="skill">
+      <div class="skill-name html">Bloc 0</div>
+      <div class="skill-level">
+        <div style="width: 100%" class="skill-percent"></div>
+      </div>
+      <div class="skill-percent-number">100%</div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name css">Bloc 1</div>
+      <div class="skill-level">
+        <div style="width: 90%" class="skill-percent"></div>
+      </div>
+      <div class="skill-percent-number">90%</div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name js">Bloc 2 (Ampliació)</div>
+      <div class="skill-level">
+        <div style="width: 0%" class="skill-percent"></div>
+      </div>
+      <div class="skill-percent-number">0%</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+  <audio id="clickSound" src="sonidos/sonido boton.mp3" preload="auto"></audio>
+</body>
+</html>
