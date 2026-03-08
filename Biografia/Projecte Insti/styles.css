@@ -532,3 +532,87 @@ body.dark-mode .progress-card {
 body.dark-mode .progress-card .header {
   background-color: rgba(140, 90, 255, 0.8);
 }
+
+/* ===========================
+   TABLAS MODERNAS
+=========================== */
+
+.table-container{
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto;
+  overflow-x: auto;
+}
+
+/* Tabla base */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all .3s ease;
+}
+
+/* Cabecera */
+th{
+  background: linear-gradient(135deg, #7d2ae8, #a374ff);
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Celdas */
+td{
+  padding: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+/* Hover filas */
+tr:hover td{
+  background: rgba(148,118,255,0.08);
+  transition: background .25s;
+}
+
+/* Última fila sin borde */
+tr:last-child td{
+  border-bottom: none;
+}
+
+/* Enlaces dentro de tabla */
+table a{
+  text-decoration: none;
+  background: #7d2ae8;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all .25s ease;
+}
+
+table a:hover{
+  background: #9f6cff;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   MODO OSCURO
+=========================== */
+
+body.dark-mode table{
+  background: rgba(30,41,59,0.7);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark-mode td{
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark-mode tr:hover td{
+  background: rgba(167,139,250,0.12);
+}

@@ -1,0 +1,530 @@
+/* Aplicamos una estructura de página flexible */
+html, body {
+    height: 100%; /* Aseguramos que el documento y la página cubran el 100% de la altura */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Hace que los elementos hijos del body se apilen en columna */
+}
+
+.wrapper {
+    flex: 1; /* Permite que el contenido crezca para llenar el espacio disponible */
+}
+
+/* Estilos generales para el pie de página */
+footer {
+    background-color: #2C3E50; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interior */
+    font-size: 0.9rem; /* Tamaño de letra */
+    position: relative; /* Mantiene el footer dentro del flujo del documento */
+    width: 100%;
+    bottom: 0;
+}
+
+/* Opcional: estiliza el botón */
+.cta-button {
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #16a085;
+}
+
+/* Estilos para el botón "Volver atrás" */
+.back-button {
+    display: inline-block;
+    margin-top: 20px; /* Ajusta el margen superior para colocarlo más arriba */
+    margin-bottom: 20px; /* Margen inferior */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative; /* Asegura que el botón se posicione correctamente */
+    top: 10px; /* Ajusta la posición vertical si es necesario */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el ratón */
+
+}
+/* Estilos para transiciones de página */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Estilos para el cambio de página */
+a.button {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+a.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+a.button:hover::before {
+    left: 0;
+}
+
+
+/* Galería de proyectos */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.project-card {
+    background: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--card-border-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--card-hover-shadow);
+}
+
+.project-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+/* Botones en la sección de proyectos */
+.project-card .button {
+    margin-top: 1.5rem;
+}
+
+
+
+/* Variables de colores */
+/* Variables de colores */
+:root {
+    --primary-color: #1E1E2C;
+    --secondary-color: #119DA4;
+    --accent-color: #119DA4;
+    --background-color: #F3F4F6;
+    --text-color: #000000;
+    --heading-color: rgb(0, 173, 173);
+    --button-bg-color: rgb(0, 173, 173);
+    --button-hover-color: #119DA4;
+    --link-color: #119DA4;
+    --link-hover-color: #0E7A80;
+    --card-bg-color: #FFFFFF;
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto 1.5em auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Cabecera PRINCIPAL, NO TOCAR NO TOCAR NO TOCAR NO TOCAR NO TOCAR.*/ 
+/*header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+} */
+
+
+
+
+
+
+
+/* Estilos generales para la cabecera */
+header {
+    background-color: #2C3E50; /* Color de fondo oscuro para contrastar */
+    color: #ffffff; /* Color del texto blanco */
+    display: flex; /* Layout flexible para alinear contenido */
+    justify-content: space-between; /* Distribuye espacio entre el logo y el menú */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 20px 50px; /* Espaciado alrededor de los elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto flotante */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    font-weight: 700; /* Negrita para destacar el nombre */
+    font-family: 'Nunito', sans-serif; /* Tipografía estilizada */
+    margin: 0; /* Elimina margen para centrarlo mejor */
+}
+
+nav a {
+    text-decoration: none; /* Elimina subrayado */
+    color: #ffffff; /* Color del texto blanco */
+    margin-left: 20px; /* Espacio entre enlaces */
+    font-size: 1.2rem; /* Tamaño adecuado para el menú */
+    font-weight: 600; /* Negrita ligera */
+    transition: color 0.3s ease; /* Transición suave en hover */
+}
+
+nav a:hover {
+    color: #1abc9c; /* Cambio de color en hover (verde menta) */
+}
+
+/* Botón de llamada a la acción */
+header .cta-button {
+    background-color: #1abc9c; /* Color verde menta */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px; /* Espaciado interior */
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 1.1rem; /* Tamaño del texto */
+    font-weight: 600; /* Negrita ligera */
+    border: none; /* Elimina borde */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease; /* Transición suave en hover */
+}
+
+header .cta-button:hover {
+    background-color: #16a085; /* Oscurece el color en hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos de las secciones */
+
+#inicio {
+    background: url('inicio-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+#inicio h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+#contacto {
+    padding: 3rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#contacto p {
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+}
+
+form button {
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Sección Lugar */
+#lugar {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+#lugar h2 {
+    font-size: 2.5rem;
+}
+
+#lugar p {
+    margin-bottom: 2rem;
+}
+
+/* Sección Historia */
+#historia {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#historia h2 {
+    font-size: 2.5rem;
+}
+
+#historia p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Sección Proyectos */
+#proyectos {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#proyectos p {
+    font-size: 1.2rem;
+}
+
+/* Sección Servicios */
+#servicios {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-3px);
+}
+/* Pie de página */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* FUENTES */ 
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.button {
+    display: block; /* Convertimos el botón en un bloque */
+    width: fit-content; /* Ajusta el ancho del botón según el contenido */
+    margin: 20px auto; /* Centra el botón horizontalmente y agrega un margen superior/inferior */
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Color de fondo en hover */
+}

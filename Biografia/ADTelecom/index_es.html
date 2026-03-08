@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AD Telecom</title>
+    <link rel="icon" type="image/x-icon" href="img/A (1).ico"> <!-- ICONO WEB DE LA PESTAÑA WEB-->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="wrapper"> <!-- Contenedor para el contenido -->
+        <header>
+            <h1>AD Telecom</h1>
+            <nav>
+                <a href="contacto_es.html">Contacto</a>
+                <a href="historia_es.html">Historia</a>
+                <a href="project_es.html">Proyectos</a>
+            </nav>
+       <!-- Botón de "Contáctanos" que abre el correo -->
+<a href="mailto:administracion@adtelecom.es" class="cta-button" id="contactanos-btn">Contáctanos</a>
+</header>
+
+<!-- Función para redirigir automáticamente a index.html después de hacer clic en el botón de "Contáctanos" -->
+<script>
+    document.getElementById('contactanos-btn').addEventListener('click', function(event) {
+       
+        setTimeout(function() {
+          
+            window.location.href = 'index_es.html';
+        }, 2000); //Aumentar tiempo, por si el cliente del correo tarda mucho en inicarse. (2 segundos)
+    });
+</script>
+
+        
+        <section id="inicio" class="main-content">
+            <h2>Bienvenidos a AD Telecom</h2>
+            <p>Desde nuestra creación en 1993 hemos estado trabajando en diferentes sectores, y desarrollando cientos de nuevos proyectos. Tenemos una larga historia a nuestras espaldas y muchos nuevos proyectos para el futuro.</p>
+            <a href="project_es.html" class="button">Conoce nuestros proyectos</a>
+        </section>
+
+        <!-- Contenido dinámico de la página (secciones independientes) -->
+        <main id="content">
+            <!-- Aquí se cargará el contenido de las secciones -->
+        </main>
+    </div> <!-- Fin del contenedor -->
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 AD Telecom. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para animación en los enlaces -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault(); // Prevenir el comportamiento por defecto
+                    const targetUrl = this.href;
+                    document.body.classList.add("fade-out");
+                    setTimeout(function() {
+                        window.location.href = targetUrl;
+                    }, 500); // Tiempo coincidente con la duración de la transición CSS
+                });
+            });
+        });
+    </script>
+</body>
+</html>

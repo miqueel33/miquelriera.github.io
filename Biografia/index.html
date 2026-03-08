@@ -1,113 +1,39 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pàgina Principal</title>
-  <link rel="icon" type="image/x-icon" href="logo.ico" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Miquel Riera</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Botón modo claro/oscuro -->
-  <input type="checkbox" id="checkboxInput" />
-  <label for="checkboxInput" class="toggleSwitch">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-  </label>
 
-  <!-- Menú hamburguesa -->
-  <label class="burger" for="burger">
-    <input type="checkbox" id="burger" />
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <!-- Menú de navegación -->
-  <nav class="nav-menu">
+<nav>
+    <div class="logo">Miquel Àngel Riera</div>
     <ul>
-      <li><a href="B0/indexb-0.html">Documentació Tècnica</a></li>
-      <!-- 
-      <li><a href="#">Proyectos</a></li>
-      <li><a href="#">Servicios</a></li>
-      -->
-      <li><a href="#">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
     </ul>
+</nav>
 
-    <!-- Barra de búsqueda -->
-    <div class="group">
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
-        <g>
-          <path
-            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 
-            4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 
-            3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 
-            11c0-4.135 3.365-7.5 7.5-7.5s7.5 
-            3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
-          </path>
-        </g>
-      </svg>
-      <input id="query" class="input" type="search" placeholder="Buscar..." name="searchbar" />
-    </div>
-  </nav>
+<header class="small-header">
+    <img src="assets/logo.ico" alt="Tu Foto">
+    <h1>Miquel Riera</h1>
+    <p class="subtitle">Joven soñador</p>
+</header>
 
-  <h1 class="main-title">Pàgina Principal</h1>
+<section>
+    <h2>Sobre mí</h2>
+    <p>
+       Me llamo Miquel Riera, tengo 18 años y actualmente me encuentro en una etapa decisiva de crecimiento personal y profesional. Desde siempre he entendido que el desarrollo no depende únicamente de la experiencia acumulada, sino de la actitud con la que se afrontan las oportunidades. <br> <br>Por eso, me esfuerzo cada día por aprender, mejorar y asumir nuevas responsabilidades con compromiso y seriedad. Me considero una persona constante, organizada y con una fuerte capacidad de adaptación. Cuando me enfrento a un nuevo reto, procuro comprenderlo en profundidad, analizar las posibles soluciones y actuar con responsabilidad. Creo firmemente que el esfuerzo sostenido y la disciplina son la base para construir una trayectoria sólida. <br> <br>A pesar de mi juventud, afronto cada oportunidad con madurez y mentalidad de crecimiento. Valoro el trabajo en equipo, la comunicación clara y el respeto dentro de cualquier entorno profesional. También tengo iniciativa propia y me gusta asumir responsabilidades que me permitan demostrar mi implicación y ganas de aportar. Mi objetivo es incorporarme a un entorno donde pueda seguir aprendiendo, contribuir con dedicación y crecer progresivamente tanto a nivel profesional como personal. Estoy convencido de que la actitud, el compromiso y la disposición para mejorar marcan la diferencia, y me esfuerzo por reflejar esos valores en todo lo que hago.
+    </p>
+</section>
 
+<footer>
+    © 2026 Miquel Riera
+</footer>
 
-
-
-
-  <!-- Tarjetas de ejemplo -->
-<div class="cards-container">
-  <div class="card">
-    <div class="icon">♦︎</div>
-    <h3>Documentació Tècnica</h3>
-    <p>Accedeix a la documentació del Bloc 0.<p>
-    <button class="button" onclick="window.location.href='B0/B0A2.html'">
-    Aceddir
-    </button>
-
-  </div>
-
- 
-
-    
-  
-  <div class="progress-card">
-  <div class="header">Progrés Blocs</div>
-  <div class="body">
-    <div class="skill">
-      <div class="skill-name html">Bloc 0</div>
-      <div class="skill-level">
-        <div style="width: 100%" class="skill-percent"></div>
-      </div>
-      <div class="skill-percent-number">100%</div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name css">Bloc 1</div>
-      <div class="skill-level">
-        <div style="width: 90%" class="skill-percent"></div>
-      </div>
-      <div class="skill-percent-number">90%</div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name js">Bloc 2 (Ampliació)</div>
-      <div class="skill-level">
-        <div style="width: 0%" class="skill-percent"></div>
-      </div>
-      <div class="skill-percent-number">0%</div>
-    </div>
-  </div>
-</div>
-
-
-
-
-  <script src="script.js"></script>
-  <audio id="clickSound" src="sonidos/sonido boton.mp3" preload="auto"></audio>
 </body>
 </html>

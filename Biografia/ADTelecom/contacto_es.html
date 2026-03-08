@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Servicios AD Telecom</title>
+    <link rel="icon" type="image/x-icon" href="img/Icono web 2.ico"> <!-- ICONO WEB DE LA PESTAÑA WEB-->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 50%;
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+        }
+
+        .map-container { 
+            display: flex;
+            justify-content: center; /* Centra el mapa horizontalmente */
+            align-items: center; /* Centra el mapa verticalmente */
+            height: 500px; /* Ajusta la altura del contenedor según sea necesario */
+            margin: 20px 0; /* Añade margen superior e inferior para separación */
+        }
+    </style>
+</head>  
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Datos de contacto</h1>
+    </header>
+
+    <section id="contacto" class="main-content">
+        <h2>Teléfono</h2>
+        <p>Tel: +34 93 223 7900</p>
+        <h2>Correo Electrónico</h2>
+        <p>administracion@adtelecom.es</p>
+        <h2>Dirección</h2>
+        <p>Camí de la Pellería 12, Polígono Industrial Bonavista Nord, 08915 Badalona (BCN), España</p>
+    </section>
+
+    <!-- Mapa Leaflet -->
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+    <div> 
+        <a href="index_es.html" class="button">Volver a Inicio</a>
+    </div>
+
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Coordenadas de ubicación
+        var map = L.map('map').setView([41.46839248755999, 2.2405468598748643], 12);
+
+        // Cargar mapa desde OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Añadir un marcador
+        L.marker([41.46839248755999, 2.2405468598748643]).addTo(map)
+            .bindPopup('Ubicación de la empresa.');
+    </script>
+
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 AD Telecom. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("a");
+
+            // Agregar evento de clic en todos los enlaces
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault(); // Prevenir el comportamiento por defecto
+
+                    const targetUrl = this.href;
+
+                    // Aplicar clase fade-out al cuerpo para la transición
+                    document.body.classList.add("fade-out");
+
+                    // Redirigir después de la animación
+                    setTimeout(function() {
+                        window.location.href = targetUrl;
+                    }, 500); // Tiempo coincidente con la duración de la transición CSS
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

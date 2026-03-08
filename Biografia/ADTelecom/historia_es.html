@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Historia AD Telecom</title>
+    <link rel="icon" type="image/x-icon" href="img/Icono web 2.ico"> <!-- ICONO WEB DE LA PESTAÑA WEB-->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>  
+
+   <!-- Cabecera -->
+   <header>
+    <h1>Nuestra Historia</h1>
+</header>
+
+
+
+<section id="historia" class="main-content">
+    <h2></h2>
+    <p>Fundada en 2001, AD Telecom ha crecido de ser una pequeña empresa local a convertirse en un líder del sector de telecomunicaciones en todo el país. Con más de dos décadas de innovación, seguimos comprometidos con el futuro de las telecomunicaciones.</p>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("a");
+        
+        // Agregar evento de clic en todos los enlaces
+        links.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevenir el comportamiento por defecto
+
+                const targetUrl = this.href;
+
+                // Aplicar clase fade-out al cuerpo para la transición
+                document.body.classList.add("fade-out");
+
+                // Redirigir después de la animación
+                setTimeout(function() {
+                    window.location.href = targetUrl;
+                }, 500); // Tiempo coincidente con la duración de la transición CSS
+            });
+        });
+    });
+</script>
+
+<div class="container"></div>
+	<h1></h1> <!--TITULO DE LA PAGINA, NO HACE FALTA PONER NINGUNO, PERO ESTA POR SI ACASO-->
+	<div class="subrayado"></div>
+	<p>Since our foundation in <b>1993</b>, we have been working in many different sectors and developing hundreds of new projects. We have a long history in our backs and many new projects for the future.</p>
+	<div class="chronology">
+	<p><b>July 2018 </b>- ADTelecom's team is invited to give a speech at the "ESNC Catalonia Challenge 2018 kick-off Barcelona" to explain its case of success as current winners of the competition.</p>
+	<p><b>February 2018</b> - ADTelecom is granted by the European Commission as part of the Horizon 2020 programme for the DANTE: Digital Alarm Network and Tracking Equipment for forest fire detection.</p>
+	<p><b>2017</b> - ADTelecom's project DANTE is awarded as the most innovative solution using satellite navigation in Catalonia by the European Satellite Navigation Competition, sponsored by the European Comission and the GSA. </p>
+	<p><b>2010</b> - We begin manufacturing the coverage expander RIT380, the first in the market to cancel echo. We are pioneers in developing these type of devices and we have done important innovations in the field of signal processing with minimum delay.</p>
+	<p><b>2010</b> - The Generalitat de Catalunya chooses ADTelecom to develop its helicopter video capture network, allowing image transmission from any helicopter in Catalonia.</p>
+	<p><b>2009</b> - The Nanosat 1B satellite is lauched. We have developed its communication systems, which include a low speed transceiver in UHF and in S band, which allows communications up until 2 Mbits.</p>
+	<p><b>2008</b> - We begin working in the aeronautics field with an EFIS system for sport aircrafts. We begin developement of a device for monitoring wind in airports.</p>
+	<p><b>2006</b> - ADTelecom begins working in the chemical sector developing a molecular chemical device based on Nuclear Magnetic Resonance technology. This has resulted in the creation of a blood analysis device using spectroscopic techniques.</p>
+	<p><b>2005</b> - We begin developement of optical technologies.</p>
+	<p><b>2004</b> - Our first space projects begins. Nanosat 01 is launched with our devices on board.</p>
+	</div>
+<div>
+    <body>  
+        <a href="index_es.html" class="button">Volver a Inicio</a>
+    </body>
+</div>
+
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 AD Telecom. Todos los derechos reservados.</p>
+    </footer>
