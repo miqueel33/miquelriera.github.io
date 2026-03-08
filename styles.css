@@ -1,12 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    /* MIQUEL RIERA */ 
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background: #f5f5f5;
+    /* MIQUEL RIERA */ 
     color: #111;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -18,6 +20,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    /* MIQUEL RIERA */ 
     background: rgba(255,255,255,0.9);
     backdrop-filter: blur(10px);
     display: flex;
@@ -38,13 +41,14 @@ nav li {
 nav a {
     text-decoration: none;
     color: #111;
+    /* MIQUEL RIERA */ 
     font-weight: 500;
 }
 
 nav a:hover {
     color: #0077ff;
 }
-
+/* MIQUEL RIERA */ 
 /* HEADER */
 
 header {
@@ -57,7 +61,7 @@ header {
     text-align: center;
     padding-top: 80px;
 }
-
+/* MIQUEL RIERA */ 
 header img {
     width: 150px;
     height: 150px;
@@ -65,32 +69,31 @@ header img {
     object-fit: cover;
     margin-bottom: 20px;
 }
-
+/* MIQUEL RIERA */ 
 h1 {
     font-size: 3rem;
 }
-
+/* MIQUEL RIERA */ 
 .subtitle {
     color: #666;
 }
-
+/* MIQUEL RIERA */ 
 section {
     max-width: 900px;
     margin: 100px auto;
     padding: 0 20px;
 }
-
+/* MIQUEL RIERA */ 
 h2 {
     margin-bottom: 20px;
     font-size: 2rem;
 }
-
+/* MIQUEL RIERA */ 
 .highlight {
     color: #0077ff;
 }
 
-/* PROYECTOS */
-
+/* MIQUEL RIERA */ 
 .project-card {
     background: white;
     padding: 20px;
@@ -98,7 +101,7 @@ h2 {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-
+/* MIQUEL RIERA */ 
 .project-card:hover {
     transform: translateY(-5px);
 }
@@ -108,8 +111,7 @@ h2 {
     text-decoration: none;
 }
 
-/* BOTÓN */
-
+/* MIQUEL RIERA */ 
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -120,6 +122,7 @@ h2 {
     transition: 0.3s;
 }
 
+/* MIQUEL RIERA */ 
 .btn:hover {
     background: #005fcc;
 }
@@ -130,3 +133,6 @@ footer {
     background: white;
     margin-top: 50px;
 }
+
+
+/* MIQUEL RIERA */ 
