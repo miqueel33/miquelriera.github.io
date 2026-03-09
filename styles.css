@@ -136,3 +136,16 @@ footer {
 
 
 /* MIQUEL RIERA */ 
+
+
+
+.page-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cv-viewer {
+    width: 80%;
+    height: 800px;
+}
